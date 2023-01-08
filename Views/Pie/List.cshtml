@@ -1,0 +1,38 @@
+@*Dont need the below anymore because of the ViewImports file*@
+@*@model MithrasPieShop.ViewModels.PieListViewModel*@
+
+@model PieListViewModel
+
+@*Better option of the below is using the ViewStart file*@
+@*@{
+    Layout = "_Layout";
+}*@
+
+
+<h1>@Model.CurrentCategory</h1>
+
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+
+@foreach (var pie in Model.Pies) //Model.Pies gives us the IEnumerable Pies
+{
+    <div class="col">
+        <div class="card pie-card bg-light">
+            <img src="@pie.ImageThumbnailUrl" class="card-img-top" alt="@pie.Name">
+            <div class="card-body pie-button">
+                <h4 class="d-grid">
+                </h4>
+                <div class="d-flex justify-content-between mt-2">
+                    <h2 class="text-start">
+                        <a class="pie-link">@pie.Name</a>
+                    </h2>
+                    <h5 class="text-nowrap">
+                        @pie.Price.ToString("c")
+                    </h5>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+</div>
