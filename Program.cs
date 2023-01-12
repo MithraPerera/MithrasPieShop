@@ -47,7 +47,7 @@ app.UseStaticFiles();
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");*/
 // above is same as saying app.MapDefaultControllerRoute();
-app.MapDefaultControllerRoute(); // aka "{controller=Home}/{action=Index}/{id?}"
+app.MapDefaultControllerRoute(); // aka "{controller=Home}/{action=Index}/{id?}" - The defaults are Home and Index. That is the default route.
 
 // ADD THE SEED DATA TO THE DATABASE // - only runs once when database is empty
 DbInitializer.Seed(app);
