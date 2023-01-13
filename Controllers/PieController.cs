@@ -27,7 +27,7 @@ public class PieController : Controller
         //return View(_pieRepository.AllPies);
         
         // Using a ViewModel class to pass all the data needed for the view in 1 shot //
-        PieListViewModel piesListViewModel = new PieListViewModel(_pieRepository.AllPies, "Cheese Cakes");
+        PieListViewModel piesListViewModel = new PieListViewModel(_pieRepository.AllPies, "All pies");
         return View(piesListViewModel);
     }
     
