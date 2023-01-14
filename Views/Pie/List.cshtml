@@ -16,7 +16,8 @@
 
 @foreach (var pie in Model.Pies) //Model.Pies gives us the IEnumerable Pies
 {
-    <div class="col">
+    /*Replaced with partial view*/
+    @*<div class="col">
         <div class="card pie-card bg-light">
             <img src="@pie.ImageThumbnailUrl" class="card-img-top" alt="@pie.Name">
             <div class="card-body pie-button">
@@ -32,7 +33,8 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>*@
+    <partial name="_PieCard" model="pie"/>
 }
 
 </div>
